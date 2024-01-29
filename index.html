@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather and Mark Sheet</title>
+</head>
+<body>
+
+    <script>
+        // Temperature Check
+        function checkTemperature() {
+            var temperatureCelsius = parseFloat(prompt("Enter the current temperature in Celsius:"));
+
+            if (temperatureCelsius > 30) {
+                alert("It's a hot day!");
+            } else {
+                alert("The weather is moderate.");
+            }
+        }
+
+        // Mark Sheet
+        function generateMarkSheet() {
+            var name = prompt("Enter your name:");
+            var marks = parseFloat(prompt("Enter your marks:"));
+
+            if (marks >= 90) {
+                grade = 'A';
+                result = 'Excellent';
+            } else if (marks >= 80) {
+                grade = 'B';
+                result = 'Good';
+            } else if (marks >= 70) {
+                grade = 'C';
+                result = 'Average';
+            } else if (marks >= 60) {
+                grade = 'D';
+                result = 'Below Average';
+            } else {
+                grade = 'F';
+                result = 'Fail';
+            }
+
+            alert("\n--- Mark Sheet ---\n" +
+                "Name: " + name + "\n" +
+                "Marks: " + marks + "\n" +
+                "Grade: " + grade + "\n" +
+                "Result: " + result);
+        }
+    </script>
+
+    <button onclick="checkTemperature()">Check Temperature</button>
+    <button onclick="generateMarkSheet()">Generate Mark Sheet</button>
+
+</body>
+</html>
